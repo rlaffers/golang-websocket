@@ -45,6 +45,11 @@ var GoChat = {
         ws.onerror = function() {
             me.onError.apply(me, arguments);
         };
+
+        ws.onmessage = function (event) {
+            me.onMessage.apply(me, arguments);
+        };
+        
         this.ws = ws;
     },
 
@@ -68,6 +73,15 @@ var GoChat = {
         }
         this.ws.close();
         this.ws = null;
+    },
+
+    onMessage: function onMessage() {
+        console.log("onmessage: " + event.data);
+        $("#console").append("<div>" + this.htmlEncode(event.data) + "</div>");
+    },
+
+    htmlEncode: function htmlEncode(value){
+        return $('<div/>').text(value).html();
     },
 
     // update current status
