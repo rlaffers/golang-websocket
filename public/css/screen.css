@@ -1,0 +1,38 @@
+/*@import "compass/reset";*/
+/* line 10, ../sass/screen.scss */
+body {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/* line 15, ../sass/screen.scss */
+h1 {
+  font-weight: bold;
+  font-size: 200%;
+  margin: 0 0 0.5em 0;
+}
+
+/* line 21, ../sass/screen.scss */
+.wrapper {
+  margin-left: 10px;
+}
+/* line 24, ../sass/screen.scss */
+.wrapper #status {
+  margin-bottom: 0.5em;
+}
+/* line 27, ../sass/screen.scss */
+.wrapper #status #connect-btn {
+  margin-left: 0.5em;
+}
+/* line 31, ../sass/screen.scss */
+.wrapper #console {
+  width: 400px;
+  height: 300px;
+  color: #cccccc;
+  background: black;
+  padding: 4px 6px;
+}
+/* line 39, ../sass/screen.scss */
+.wrapper #message {
+  width: 400px;
+}

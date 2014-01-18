@@ -1,0 +1,43 @@
+/*@import "compass/reset";*/
+
+$width: 400px;
+$height: 300px;
+$consoleColor: #CCCCCC;
+$consoleBkg: #000000;
+$baseSize: 14px;
+$lineHeight: 16px;
+
+body {
+		font-size: $baseSize;
+		line-height: $lineHeight;
+}
+
+h1 {
+		font-weight: bold;
+		font-size: 200%;
+		margin: 0 0 0.5em 0;
+}
+
+.wrapper {
+		margin-left: 10px;
+
+		#status {
+				margin-bottom: 0.5em;
+
+				#connect-btn {
+						margin-left: 0.5em;
+				}
+		}
+		#console {
+				width: $width;
+				height: $height;
+				color: $consoleColor;
+				background: $consoleBkg;
+				padding: 4px 6px;
+		}
+
+		#message {
+				width: $width;
+		}
+}
+
