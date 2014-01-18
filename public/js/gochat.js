@@ -1,6 +1,6 @@
 $(document).ready(function() {
         var settings = {
-            url: 'ws://localhost:8000'
+            url: 'ws://localhost:8080'
         };
 
         $('#connect-btn').click(function() {
@@ -16,6 +16,13 @@ $(document).ready(function() {
             }
             GoChat.sendMessage(msg);
         });
+
+				$("#message").keypress(function (event) {
+						if (event.which == 13) { // Enter key
+								var message = $("#message").val();
+								GoChat.sendMessage(msg);
+						}
+				});
 });
 
 
@@ -27,12 +34,12 @@ var GoChat = {
 
     connect: function connect(url) {
         var username, ws, me = this;
-        this.setStatus('Connecting');
         username = $('#username').val();
         if (username.length < 1) {
             alert('Name is mandatory!');
             return;
         }
+        this.setStatus('Connecting');
         this.username = username;
         ws = new WebSocket(url);
 

@@ -3,36 +3,39 @@
 body {
   font-size: 14px;
   line-height: 16px;
+  background: #CCCCCC;
 }
 
-/* line 15, ../sass/screen.scss */
+/* line 16, ../sass/screen.scss */
 h1 {
   font-weight: bold;
   font-size: 200%;
   margin: 0 0 0.5em 0;
 }
 
-/* line 21, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 .wrapper {
-  margin-left: 10px;
+  padding: 0 10px;
 }
-/* line 24, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 .wrapper #status {
   margin-bottom: 0.5em;
 }
-/* line 27, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 .wrapper #status #connect-btn {
   margin-left: 0.5em;
 }
-/* line 31, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 .wrapper #console {
-  width: 400px;
+  width: 100%;
   height: 300px;
   color: #cccccc;
   background: black;
   padding: 4px 6px;
 }
-/* line 39, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 .wrapper #message {
-  width: 400px;
+  margin: 0;
+  border: 0;
+  width: 600px;
 }
