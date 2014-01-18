@@ -33,7 +33,11 @@ h1 {
   background: black;
   padding: 4px 6px;
 }
-/* line 40, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
+.wrapper #console .username {
+  color: red;
+}
+/* line 44, ../sass/screen.scss */
 .wrapper #message {
   margin: 0;
   border: 0;

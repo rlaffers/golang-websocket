@@ -1,6 +1,6 @@
 $(document).ready(function() {
         var settings = {
-            url: 'ws://localhost:8080'
+            url: 'ws://192.168.200.112:8080'
         };
 
         $('#connect-btn').click(function() {
@@ -34,6 +34,11 @@ var GoChat = {
 
     connect: function connect(url) {
         var username, ws, me = this;
+        // close old connections
+        if (me.ws) {
+            me.ws.close();
+            me.ws = null;
+        }
         username = $('#username').val();
         if (username.length < 1) {
             alert('Name is mandatory!');
@@ -64,6 +69,7 @@ var GoChat = {
         console.info('connection is open');
         this.setStatus(this.CONNECTED);
         $("#send-btn").removeAttr('disabled');
+        $('#console').text('');
     },
 
     onClose: function onClose(e) {
@@ -82,9 +88,11 @@ var GoChat = {
         this.ws = null;
     },
 
-    onMessage: function onMessage() {
-        console.log("onmessage: " + event.data);
-        $("#console").append("<div>" + this.htmlEncode(event.data) + "</div>");
+    onMessage: function onMessage(event) {
+        var msg;
+        msg = JSON.parse(event.data);
+        console.log(msg);
+        $("#console").append("<div><span class=\"username\">" + msg.username + "</span>: " + this.htmlEncode(msg.msg) + "</div>");
     },
 
     htmlEncode: function htmlEncode(value){
