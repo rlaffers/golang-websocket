@@ -15,12 +15,14 @@ $(document).ready(function() {
                 return false;
             }
             GoChat.sendMessage(msg);
+            $("#message").val('');
         });
 
 				$("#message").keypress(function (event) {
 						if (event.which == 13) { // Enter key
 								var message = $("#message").val();
-								GoChat.sendMessage(msg);
+								GoChat.sendMessage(message);
+                $("#message").val('');
 						}
 				});
 });
