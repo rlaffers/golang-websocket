@@ -35,6 +35,7 @@ h1 {
 				color: $consoleColor;
 				background: $consoleBkg;
 				padding: 4px 6px;
+				overflow: scroll;
 
         .username {
             color: red;

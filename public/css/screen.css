@@ -32,12 +32,13 @@ h1 {
   color: #cccccc;
   background: black;
   padding: 4px 6px;
+  overflow: scroll;
 }
-/* line 39, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 .wrapper #console .username {
   color: red;
 }
-/* line 44, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 .wrapper #message {
   margin: 0;
   border: 0;
