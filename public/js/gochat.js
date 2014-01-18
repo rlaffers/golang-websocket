@@ -1,6 +1,6 @@
 $(document).ready(function() {
         var settings = {
-            url: 'ws://192.168.200.112:8080'
+            url: 'ws://localhost:8080'
         };
 
         $('#connect-btn').click(function() {
